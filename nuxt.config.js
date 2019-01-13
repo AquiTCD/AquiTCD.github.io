@@ -24,6 +24,7 @@ module.exports = {
       process.env.BASE_URL ||
       `http://${host}:${port}`
   },
+  mode: 'spa',
   head: {
     title: "The Portfolio of Aqui.TCD",
     meta: [
@@ -44,8 +45,19 @@ module.exports = {
         rel: "icon",
         type: "image/x-icon",
         href: "/favicon.ico"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+        integrity: "sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/",
+        crossorigin: "anonymous"
       }
     ]
+  },
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
   },
   /*
   ** Customize the progress-bar color
@@ -54,7 +66,7 @@ module.exports = {
   /*
   ** Build configuration
   */
-  css: ["~/assets/style/main.sass"],
+  css: ['ress',"~/assets/styles/main.sass"],
   build: {
     extend(config) {
       config.module.rules.push({
@@ -65,7 +77,11 @@ module.exports = {
   },
   modules: [
     "@nuxtjs/axios",
-    "~/modules/typescript.js"
+    "~/modules/typescript.js",
+    ['nuxt-sass-resources-loader']
+  ],
+  sassResources: [
+    '~/assets/styles/_config.sass'
   ],
   axios: {}
 }
