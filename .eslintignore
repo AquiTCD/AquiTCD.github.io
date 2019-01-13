@@ -1,3 +1,4 @@
 nuxt.config.js
 package.json
 node_modules/
+index.d.ts
