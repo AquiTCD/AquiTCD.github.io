@@ -25,6 +25,9 @@ module.exports = {
       `http://${host}:${port}`
   },
   mode: 'spa',
+  generate: {
+    dir: 'docs'
+  },
   head: {
     title: "The Portfolio of Aqui.TCD",
     meta: [
