@@ -23,6 +23,7 @@ const siteInfo = {
   title: "The Portfolio of Aqui.TCD",
   description: "これは AquiTCD のエンジニアとしてのポートフォリオです。今まで個人で開発したもの、活動履歴、スキルセット、考えていることなどを公表しています。",
   ogpImage: "ogp.png",
+  baseUrl: "https://aquitcd.github.io",
   locale: "ja_JP",
   twitterId: 'AquiTCD',
   searchConsole: 'eRq3hmhxlmrqYtKIs88-4pmdyrEIQJO7X6aw5TsJJtw'
@@ -49,10 +50,10 @@ module.exports = {
       // OGP
       { hid: 'og:site_name', property: 'og:site_name', content: siteInfo.title },
       { hid: 'og:type', property: 'og:type', content: 'artice' },
-      { hid: 'og:url', property: 'og:url', content: baseUrl },
+      { hid: 'og:url', property: 'og:url', content: siteInfo.baseUrl },
       { hid: 'og:title', property: 'og:title', content: siteInfo.title },
       { hid: 'og:description', property: 'og:description', content: siteInfo.description },
-      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/${siteInfo.ogpImage}` },
+      { hid: 'og:image', property: 'og:image', content: `${siteInfo.baseUrl}/${siteInfo.ogpImage}` },
       { property: 'og:locale', content: siteInfo.locale },
       //- OGP Facebook
       // { property: 'fb:app_id', content: '' },
