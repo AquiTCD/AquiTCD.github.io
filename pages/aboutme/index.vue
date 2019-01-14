@@ -52,6 +52,9 @@
           span.skillset Other TECHs
           ul
             li.skill
+              span.skill_title Git
+              span.skill_rating ★★★★★
+            li.skill
               span.skill_title HTML5
               span.skill_rating ★★★★★
             li.skill
