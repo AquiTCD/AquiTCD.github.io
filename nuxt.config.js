@@ -54,15 +54,17 @@ module.exports = {
       { hid: 'og:title', property: 'og:title', content: siteInfo.title },
       { hid: 'og:description', property: 'og:description', content: siteInfo.description },
       { hid: 'og:image', property: 'og:image', content: `${siteInfo.baseUrl}/${siteInfo.ogpImage}` },
+      { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
+      { hid: 'og:image:height', property: 'og:image:height', content: '630' },
       { property: 'og:locale', content: siteInfo.locale },
       //- OGP Facebook
       // { property: 'fb:app_id', content: '' },
       //- OGP Twitter Cards
-      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:card', content: 'summary_large_image' },
       // { name: 'twitter:site', content: '@site'},
       { name: 'twitter:creator', content: siteInfo.twitterId },
       { name: 'twitter:description', content: siteInfo.description },
-      { name: 'twitter:image', content: siteInfo.ogpImage },
+      // { name: 'twitter:image', content: siteInfo.ogpImage },
       // Google Search Console
       { name: 'google-site-verification', content: siteInfo.searchConsole },
     ],
