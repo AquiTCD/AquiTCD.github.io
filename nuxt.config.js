@@ -18,6 +18,15 @@ const host =
   process.env.HOST ||
   process.env.npm_package_config_nuxt_host ||
   "localhost"
+
+const siteInfo = {
+  title: "The Portfolio of Aqui.TCD",
+  description: "これは AquiTCD のエンジニアとしてのポートフォリオです。今まで個人で開発したもの、活動履歴、スキルセット、考えていることなどを公表しています。",
+  ogpImage: "ogp.png",
+  locale: "ja_JP",
+  twitterId: 'AquiTCD',
+  searchConsole: 'eRq3hmhxlmrqYtKIs88-4pmdyrEIQJO7X6aw5TsJJtw'
+}
 module.exports = {
   env: {
     baseUrl:
@@ -29,32 +38,58 @@ module.exports = {
     dir: 'docs'
   },
   head: {
-    title: "The Portfolio of Aqui.TCD",
+    title: siteInfo.title,
     meta: [
       { charset: "utf-8" },
-      {
-        name: "viewport",
-        content:
-          "width=device-width, initial-scale=1"
-      },
-      {
-        hid: "description",
-        name: "description",
-        content: "Nuxt.js project"
-      }
+      { name: "viewport", content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0' },
+      { name: 'format-detection', content: 'telephone=no, email=no, address=no' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { hid: 'description', name: 'description', content: siteInfo.description },
+      // OGP
+      { hid: 'og:site_name', property: 'og:site_name', content: siteInfo.title },
+      { hid: 'og:type', property: 'og:type', content: 'artice' },
+      { hid: 'og:url', property: 'og:url', content: baseUrl },
+      { hid: 'og:title', property: 'og:title', content: siteInfo.title },
+      { hid: 'og:description', property: 'og:description', content: siteInfo.description },
+      { hid: 'og:image', property: 'og:image', content: `${baseUrl}/${siteInfo.ogpImage}` },
+      { property: 'og:locale', content: siteInfo.locale },
+      //- OGP Facebook
+      // { property: 'fb:app_id', content: '' },
+      //- OGP Twitter Cards
+      { name: 'twitter:card', content: 'summary' },
+      // { name: 'twitter:site', content: '@site'},
+      { name: 'twitter:creator', content: siteInfo.twitterId },
+      { name: 'twitter:description', content: siteInfo.description },
+      { name: 'twitter:image', content: siteInfo.ogpImage },
+      // Google Search Console
+      { name: 'google-site-verification', content: siteInfo.searchConsole },
     ],
     link: [
       {
-        rel: "icon",
+        rel: "shortcut icon",
         type: "image/x-icon",
         href: "/favicon.ico"
       },
+      {
+        rel: "apple-touch-icon",
+        href: "/kamon.png"
+      },
+      // {
+      //   rel: 'canonical',
+      //   href: "/favicon.ico"
+      // },
+      // {
+      //   rel: "alternate",
+      //   type: "application/rss+xml",
+      //   href: "/rss"
+      // },
       {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
         integrity: "sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/",
         crossorigin: "anonymous"
-      }
+      },
     ]
   },
   router: {
@@ -65,7 +100,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: "#3B8070" },
+  loading: { color: "#d50000" },
   /*
   ** Build configuration
   */
