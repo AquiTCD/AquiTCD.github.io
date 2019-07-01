@@ -23,46 +23,46 @@
           ul
             li.skill
               span.skill_title Ruby On Rails
-              span.skill_rating ★★★★☆
+              span.skill_rating ★★★☆☆
             li.skill
               span.skill_title Rspec
-              span.skill_rating ★★★★☆
+              span.skill_rating ★★★☆☆
         li.skill-list
           span.skillset JavaScript(TypeScript)
           ul
             li.skill
               span.skill_title Vue.js
-              span.skill_rating ★★★★☆
+              span.skill_rating ★★★☆☆
             li.skill
               span.skill_title Google App Script
-              span.skill_rating ★★★★☆
+              span.skill_rating ★★★☆☆
             li.skill
               span.skill_title Jest
-              span.skill_rating ★★★☆☆
+              span.skill_rating ★★☆☆☆
         li.skill-list
           span.skillset Infrastructure
           ul
             li.skill
               span.skill_title AWS
-              span.skill_rating ★★★☆☆
+              span.skill_rating ★★☆☆☆
             li.skill
               span.skill_title GCP
-              span.skill_rating ★★★☆☆
+              span.skill_rating ★★☆☆☆
         li.skill-list
           span.skillset Other TECHs
           ul
             li.skill
               span.skill_title Git
-              span.skill_rating ★★★★★
+              span.skill_rating ★★★★☆
             li.skill
               span.skill_title HTML5
-              span.skill_rating ★★★★★
+              span.skill_rating ★★★★☆
             li.skill
               span.skill_title CSS
-              span.skill_rating ★★★★★
+              span.skill_rating ★★★★☆
             li.skill
               span.skill_title Electron
-              span.skill_rating ★★★☆☆
+              span.skill_rating ★★☆☆☆
             li.skill
               span.skill_title Adobe Photoshop
               span.skill_rating ★★★☆☆
@@ -129,8 +129,8 @@
               a(href="https://speakerdeck.com/aquitcd/the-way-to-develop-gas-with-mocking-integration-test-by-jest" target="_blank") GAS開発のJestによるモック入り結合テスト仕立て@【エンジニア交流会】Google Apps Script 活用ミートアップ #3
           h4 Private
           ul
-            li 2017年 社内勉強会 最優秀トーク賞
-            li 2018年 社内勉強会 優秀トーク賞
+            li 2017年 （前職）社内勉強会 最優秀トーク賞
+            li 2018年 （前職）社内勉強会 優秀トーク賞
           h3 Writing
           ul
             li
@@ -138,15 +138,15 @@
               a(href="https://blog.solunita.net/" target="_blank") Trial and Spiral
 </template>
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import { State, Action } from 'vuex-class'
+import { Component, Vue } from "nuxt-property-decorator";
+import { State, Action } from "vuex-class";
 @Component
 export default class extends Vue {
   // scrollToTop: true
-  @State currentPage
-  @Action('SELECT_PAGE_BY_NAME') selectPageByName
+  @State currentPage;
+  @Action("SELECT_PAGE_BY_NAME") selectPageByName;
   async mounted() {
-    await this.selectPageByName('aboutme')
+    await this.selectPageByName("aboutme");
   }
 }
 </script>
