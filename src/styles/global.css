@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
 :root {
   --bg-color: #0a0a0a;
@@ -6,7 +6,7 @@
   --text-inverse: #000000;
   --accent-red: #e60012;
   --accent-white: #f4f4f4;
-  --font-heading: 'Noto Sans JP', sans-serif;
+  --font-heading: 'Dela Gothic One', 'Noto Sans JP', sans-serif;
   --font-body: 'Noto Sans JP', sans-serif;
 }
 
@@ -35,7 +35,7 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-heading);
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.03em;
 }
 
@@ -101,3 +101,4 @@ rt {
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }

@@ -18,7 +18,8 @@ import Layout from '../layouts/Layout.astro';
             <p class="bio">
               アキ です。<br>
               アクションゲーム好きの雑食ゲーマーです。<br>
-              Vtuberではありません、「六角橋」は地名、アキは本名から、元バーチャ勢なので。<br>
+              Vtuberではありません。<br>
+              「六角橋」は地名、アキは本名から、元バーチャ勢なので。<br>
               以前、世界をフラフラしてました。<br>
               今はなんとなく一生懸命に生きてます。<br>
               格ゲー上達支援Webアプリ「ヒトツヨ」を開発してます。<br>
@@ -83,8 +84,27 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </a>
 
-      <!-- Discord -->
-      <a href="https://discord.gg/hduVYVbj3b" class="activity-card skew-box solid-shadow animate-slide-in delay-200 discord-card" target="_blank" rel="noopener noreferrer">
+      <!-- A.K.I.研究所 Discord -->
+      <a href="https://discord.gg/9MNuzE5B2Z" class="activity-card skew-box solid-shadow animate-slide-in delay-200 discord-card aki-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-inner side-icon-inner">
+          <div class="card-bg"></div>
+          <div class="platform-icon discord-icon-wrap">
+            <img src="/iconA20.png" alt="A.K.I.研究所" class="discord-icon-img" />
+          </div>
+          <div class="card-text">
+            <h3 class="card-title discord-title">A.K.I.研究所</h3>
+            <p class="discord-label">Discord サーバー</p>
+            <p class="card-desc">
+              A.K.I.プレイヤー、またはA.K.I.を使ってみたいプレイヤーのための情報交換と交流が目的のサーバーです。<br>
+              A.K.I.の実装リリース前から存在し、もっとも開かれたキャラサーバーの一つです。<br>
+              初心者から上級者まで幅広く使われています。
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- 社会人協力ゲーム組合 Discord -->
+      <a href="https://discord.gg/hduVYVbj3b" class="activity-card skew-box solid-shadow animate-slide-in delay-300 discord-card" target="_blank" rel="noopener noreferrer">
         <div class="card-inner side-icon-inner">
           <div class="card-bg"></div>
           <div class="platform-icon discord-icon-wrap">
@@ -104,7 +124,7 @@ import Layout from '../layouts/Layout.astro';
       </a>
 
       <!-- X -->
-      <a href="https://x.com/AquiTCD" class="activity-card skew-box solid-shadow animate-slide-in delay-300 x-card" target="_blank" rel="noopener noreferrer">
+      <a href="https://x.com/AquiTCD" class="activity-card skew-box solid-shadow animate-slide-in delay-400 x-card" target="_blank" rel="noopener noreferrer">
         <div class="card-inner side-icon-inner">
           <div class="card-bg"></div>
           <div class="platform-icon x-icon-wrap" aria-label="X (Twitter)">
@@ -172,8 +192,9 @@ import Layout from '../layouts/Layout.astro';
 
   .name {
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: 400;
     line-height: 1;
+    color: var(--text-inverse);
   }
 
   .bio-container {
@@ -247,7 +268,7 @@ import Layout from '../layouts/Layout.astro';
     right: 10px;
     background: var(--accent-red);
     color: var(--text-primary);
-    font-weight: 900;
+    font-weight: 400;
     font-family: var(--font-heading);
     padding: 4px 16px;
     font-size: 0.95rem;
@@ -267,7 +288,7 @@ import Layout from '../layouts/Layout.astro';
 
   .card-title {
     font-size: 2.6rem;
-    font-weight: 900;
+    font-weight: 400;
     display: inline-block;
     background-color: var(--accent-red);
     color: var(--text-primary);
@@ -335,7 +356,7 @@ import Layout from '../layouts/Layout.astro';
 
   .btn-primary, .btn-youtube {
     display: inline-block;
-    font-weight: 900;
+    font-weight: 400;
     font-family: var(--font-heading);
     text-decoration: none;
     padding: 12px 28px;
@@ -494,7 +515,7 @@ import Layout from '../layouts/Layout.astro';
   .philosophy-closing {
     display: inline-block;
     margin-top: 8px;
-    color: var(--accent-red);
+    color: var(--text-primary);
     font-size: 1.1rem;
     font-weight: 900;
   }
