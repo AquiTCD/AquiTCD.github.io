@@ -21,21 +21,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Setup mise
-        uses: jdx/mise-action@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          install: true
+          node-version: '22'
+          cache: 'npm'
 
-      - name: Install aube
-        run: |
-          # Install aube package manager
-          brew install endevco/tap/aube
-          
       - name: Install dependencies
-        run: aube install
-        
+        run: npm ci
+
       - name: Build with Astro
-        run: aube run build
+        run: npm run build
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
