@@ -1,0 +1,143 @@
+site:
+  title: Portfolio of Aqui TSUCHIDA
+  auther: Aqui TSUCHIDA(@Aqui.TCD)
+  published: 2018
+  updated: 2018
+currentPage:
+  name: null
+  title: null
+  parent: null
+  menus: null
+  contents: null
+pages:
+  index:
+    name: index
+    title: index
+    parent: null
+    background: /roraima.jpg
+    menus:
+    - name: aboutme
+      type: list
+      path: aboutme
+      title: AboutMe
+    - name: products
+      type: list
+      path: products
+      title: Products
+    - name: thoughts
+      type: list
+      path: thoughts
+      title: Thoughts
+    contents:
+      - heading: null
+        image: null
+        content: this is portfolio about Aqui TSUCHIDA
+  aboutme:
+    name: aboutme
+    title: AboutMe
+    parent: index
+    background: /uyuni.jpg
+    menus: null
+    contents: null
+  products:
+    name: products
+    title: Products
+    parent: index
+    background: /poonhill.jpg
+    menus:
+    - name: pentazemin
+      type: block
+      path: /products/pentazemin
+      image: https://aquitcd.github.io/Pentazemin/_nuxt/img/main.ba7a3e5.png
+      title: Pentazemin
+      description: |-
+        Desktop App for Mac/Windows/Linux
+        Made with Vue.js and Electorn
+
+        Pentazeminは今やるべきことへフォーカスし集中しながらタスク消化を支援するアプリです。
+        よくあるただのToDoアプリではなく、タイムマネジメントに近いものです。
+        ToDoアプリやポモドーロタイマーアプリは既に数多くありますが、
+        Pentazeminはその2つを組み合わせました。
+    - name: sprintus
+      type: block
+      path: /products/sprintus
+      image: /sprintus_preview.png
+      title: Sprintus
+      description: |-
+        WebApp for Todo Management for team
+        Made with Nuxt.js with firestore
+
+        Sprintusはチーム内でタスクを共有するシステムです。タスクの時間軸を一週間に限定することで、従来のチャートとは違い長期的目標とは別にまず集中してタスクをこなすことにフォーカスします。
+    - name: yantan
+      type: block
+      path: /products/yantan
+      image: https://aquitcd.github.io/yantan/_nuxt/img/main.5588380.png
+      title: YANTAN
+      description: |-
+        Yet Another NewTab as Notes
+        Made with Vue.js
+
+        YANTAN はGoogle Chromeの拡張「新しいタブ」を置き替えます。
+        Markdownで書けるノート機能をベースとして、好きな画像を背景に設定することができます。
+
+        数ある「新しいタブ」用の拡張はWeb上の美麗な画像を自動で取得しますが、
+        「美しい」は必ずしも「自分の好み」のものと一致しないこともあります。
+        YATANでは自分の好きな画像を選んで表示することができます。
+
+        同時にGitHub Flavored Markdownなので、
+        すぐに使えるメモ、タスクリストとしても使える実用性も兼ねています。
+    - name: mhw-cheatsheet
+      type: block
+      path: products/mhw-cheatsheet
+      image: https://pbs.twimg.com/media/DY5xqKeWAAI1s98.png:large
+      title: MHW-CheatSheet
+      description: |-
+        Made with Nuxt.js
+
+        VideoGame「モンスターハンターワールド」用のモンスター弱点早見システムです。
+        ゲームのロード中や外出中に使用するということを考えてPWAとして作りました。
+    contents: null
+  pentazemin:
+    name: pentazemin
+    title: Pentazemin
+    parent: products
+    menus: null
+    contents:
+    - heading: Pentazemin
+      image: /pentazemin.png
+      content: about Pentazemin
+  sprintus:
+    name: sprintus
+    title: Sprintus
+    parent: products
+    menus: null
+    contents:
+    - heading: sprintus
+      image: /sprintus.png
+      content: about Sprintus
+  yantan:
+    name: yantan
+    title: YANTAN
+    parent: products
+    menus: null
+    contents:
+    - heading: yantan
+      image: /yantan.png
+      content: about YANTAN
+  mhw-cheatsheet:
+    name: mhw-cheatsheet
+    title: MHW-CheatSheet
+    parent: products
+    menus: null
+    contents:
+    - heading: mhw-cheatsheet
+      image: /mhw-cheatsheet.png
+      content: about MHW-CheatSheet
+  thoughts:
+    name: thoughts
+    title: Thoughts
+    parent: index
+    background: /pascua.jpg
+    menus: null
+    contents: null
+
