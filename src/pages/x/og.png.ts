@@ -7,18 +7,15 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
   try {
-    const [notoSansFile, notoSerifFile, delaGothicFile] = await Promise.all([
+    const [notoSansFile, notoSerifFile] = await Promise.all([
       fetch('https://raw.githubusercontent.com/googlefonts/noto-cjk/main/Sans/OTF/Japanese/NotoSansCJKjp-Bold.otf'),
       fetch('https://raw.githubusercontent.com/googlefonts/noto-cjk/main/Serif/OTF/Japanese/NotoSerifCJKjp-Black.otf'),
-      fetch('https://raw.githubusercontent.com/google/fonts/main/ofl/delagothicone/DelaGothicOne-Regular.ttf'),
     ]);
     if (!notoSansFile.ok) throw new Error(`Noto Sans fetch failed: ${notoSansFile.statusText}`);
     if (!notoSerifFile.ok) throw new Error(`Noto Serif fetch failed: ${notoSerifFile.statusText}`);
-    if (!delaGothicFile.ok) throw new Error(`Dela Gothic fetch failed: ${delaGothicFile.statusText}`);
-    const [notoSansData, notoSerifData, delaGothicData] = await Promise.all([
+    const [notoSansData, notoSerifData] = await Promise.all([
       notoSansFile.arrayBuffer(),
       notoSerifFile.arrayBuffer(),
-      delaGothicFile.arrayBuffer(),
     ]);
 
     const toDataUrlFetch = async (url: string, mime = 'image/png'): Promise<string> => {
@@ -75,13 +72,13 @@ export const GET: APIRoute = async () => {
         <!-- Name badge (top-left) -->
         <div style="display: flex; position: absolute; top: 26px; left: 40px;">
           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #e60012; border: 3px solid #fff; box-shadow: 5px 5px 0px #fff; transform: skew(-8deg); display: flex;"></div>
-          <div style="display: flex; font-size: 30px; font-weight: 900; color: #0a0a0a; padding: 6px 22px; font-family: 'DelaGothic';">六角橋アキ / AquiTCD</div>
+          <div style="display: flex; font-size: 30px; font-weight: 900; color: #0a0a0a; padding: 6px 22px; font-family: 'NotoSans';">六角橋アキ / AquiTCD</div>
         </div>
 
         <!-- Works badge (top-right) -->
         <div style="display: flex; position: absolute; top: 26px; right: 40px;">
           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #0a0a0a; border: 3px solid #e60012; box-shadow: -5px 5px 0px #e60012; transform: skew(-8deg); display: flex;"></div>
-          <div style="display: flex; font-size: 22px; font-weight: 900; color: #ffffff; padding: 5px 18px; font-family: 'DelaGothic';">WORKS</div>
+          <div style="display: flex; font-size: 22px; font-weight: 900; color: #ffffff; padding: 5px 18px; font-family: 'NotoSans';">WORKS</div>
         </div>
 
         <!-- Main 2-column layout: top=96, bottom=32 → height=502px -->
@@ -95,7 +92,7 @@ export const GET: APIRoute = async () => {
               <!-- MAIN PROJECT label -->
               <div style="display: flex; position: relative; align-self: flex-start; margin-bottom: 6px;">
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #e60012; transform: skew(-8deg); display: flex;"></div>
-                <div style="display: flex; font-size: 15px; font-weight: 900; color: #0a0a0a; padding: 3px 12px; font-family: 'DelaGothic';">MAIN PROJECT</div>
+                <div style="display: flex; font-size: 15px; font-weight: 900; color: #0a0a0a; padding: 3px 12px; font-family: 'NotoSans';">MAIN PROJECT</div>
               </div>
 
               <!-- Main row: [left content flex:1] | [right stacked images 96px] -->
@@ -152,7 +149,7 @@ export const GET: APIRoute = async () => {
                   <div style="display: flex; width: 38px; height: 38px; border-radius: 6px; overflow: hidden; flex-shrink: 0; border: 2px solid #ffffff;">
                     <img src="${twitchIconDataUrl}" width="38" height="38" style="width: 38px; height: 38px; object-fit: cover; display: flex;" />
                   </div>
-                  <div style="display: flex; font-size: 38px; font-weight: 900; color: #ffffff; font-family: 'DelaGothic'; line-height: 1;">TWITCH</div>
+                  <div style="display: flex; font-size: 38px; font-weight: 900; color: #ffffff; font-family: 'NotoSans'; line-height: 1;">TWITCH</div>
                 </div>
                 <!-- Body: text + QR 80px -->
                 <div style="display: flex; flex-direction: row; gap: 10px; flex: 1; align-items: flex-start;">
@@ -175,7 +172,7 @@ export const GET: APIRoute = async () => {
                   <div style="display: flex; width: 20px; height: 20px; border-radius: 4px; overflow: hidden; flex-shrink: 0;">
                     <img src="${discordServiceIconDataUrl}" width="20" height="20" style="width: 20px; height: 20px; object-fit: cover; display: flex;" />
                   </div>
-                  <div style="display: flex; font-size: 28px; font-weight: 900; color: #ffffff; font-family: 'DelaGothic'; line-height: 1;">A.K.I.研究所</div>
+                  <div style="display: flex; font-size: 28px; font-weight: 900; color: #ffffff; font-family: 'NotoSans'; line-height: 1;">A.K.I.研究所</div>
                   <div style="display: flex; width: 28px; height: 28px; border-radius: 50%; overflow: hidden; border: 2px solid #ffffff; flex-shrink: 0;">
                     <img src="${akiIconDataUrl}" width="28" height="28" style="width: 28px; height: 28px; object-fit: cover; display: flex;" />
                   </div>
@@ -200,7 +197,7 @@ export const GET: APIRoute = async () => {
                   <div style="display: flex; width: 20px; height: 20px; border-radius: 4px; overflow: hidden; flex-shrink: 0;">
                     <img src="${discordServiceIconDataUrl}" width="20" height="20" style="width: 20px; height: 20px; object-fit: cover; display: flex;" />
                   </div>
-                  <div style="display: flex; font-size: 28px; font-weight: 900; color: #ffffff; font-family: 'DelaGothic'; line-height: 1;">社会人協力ゲーム組合</div>
+                  <div style="display: flex; font-size: 28px; font-weight: 900; color: #ffffff; font-family: 'NotoSans'; line-height: 1;">社会人協力ゲーム組合</div>
                   <div style="display: flex; width: 28px; height: 28px; border-radius: 50%; overflow: hidden; border: 2px solid #ffffff; flex-shrink: 0;">
                     <img src="${coopServerIconDataUrl}" width="28" height="28" style="width: 28px; height: 28px; object-fit: cover; display: flex;" />
                   </div>
@@ -225,9 +222,6 @@ export const GET: APIRoute = async () => {
       width: 1200,
       height: 630,
       fonts: [
-        { name: 'DelaGothic', data: delaGothicData, weight: 400, style: 'normal' },
-        { name: 'DelaGothic', data: delaGothicData, weight: 700, style: 'normal' },
-        { name: 'DelaGothic', data: delaGothicData, weight: 900, style: 'normal' },
         { name: 'Noto Serif JP', data: notoSerifData, weight: 900, style: 'normal' },
         { name: 'Noto Sans JP', data: notoSansData, weight: 700, style: 'normal' },
         { name: 'Noto Sans JP', data: notoSansData, weight: 900, style: 'normal' },

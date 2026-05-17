@@ -1,29 +1,38 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
 ---
-<Layout title="六角橋アキ / AquiTCD - ヒトツヨ開発者" description="アキです。アクションゲーム好きの雑食ゲーマー。格ゲー上達支援Webアプリ「ヒトツヨ」開発してます。" image="/x/og.png">
-  <main class="container">
 
+<Layout
+  title="AquiTCD"
+  description="アキです。アクションゲーム好きの雑食ゲーマー。格ゲー上達支援Webアプリ「ヒトツヨ」開発してたり、いろいろ運営してたり。"
+  image="/x/og.png"
+  noindex={true}
+>
+  <main class="container">
     <header class="profile-header">
       <div class="name-container skew-box solid-shadow-alt animate-slide-in">
         <h1 class="name">六角橋アキ / AquiTCD</h1>
       </div>
 
-      <div class="bio-container skew-box solid-shadow animate-slide-in delay-100">
+      <div
+        class="bio-container skew-box solid-shadow animate-slide-in delay-100"
+      >
         <div class="bio-inner">
           <div class="avatar-wrap">
             <img src="/avatar-x.jpg" alt="六角橋アキ" class="avatar-img" />
           </div>
           <div class="bio-text">
             <p class="bio">
-              アキ です。<br>
-              アクションゲーム好きの雑食ゲーマーです。<br>
-              Vtuberではありません。<br>
-              「六角橋」は地名、アキは本名から、元バーチャ勢なので。<br>
-              以前、世界をフラフラしてました。<br>
-              今はなんとなく一生懸命に生きてます。<br>
-              格ゲー上達支援Webアプリ「ヒトツヨ」を開発してます。<br>
-              <span class="hashtags">#ゲーマー #Webエンジニア #Rubyist #多言語話者</span>
+              アキ です。<br />
+              アクションゲーム好きの雑食ゲーマーです。<br />
+              Vtuberではありません。<br />
+              「六角橋」は地名、アキは本名から、元バーチャ勢なので。<br />
+              以前、世界をフラフラしてました。<br />
+              今はなんとなく一生懸命に生きてます。<br />
+              格ゲー上達支援Webアプリ「ヒトツヨ」を開発してます。<br />
+              <span class="hashtags"
+                >#ゲーマー #Webエンジニア #Rubyist #多言語話者</span
+              >
             </p>
           </div>
         </div>
@@ -31,7 +40,6 @@ import Layout from '../layouts/Layout.astro';
     </header>
 
     <section class="activities-section">
-
       <!-- ヒトツヨ featured -->
       <div class="main-featured animate-slide-in">
         <div class="featured-card skew-box solid-shadow">
@@ -41,20 +49,37 @@ import Layout from '../layouts/Layout.astro';
             <div class="content-split">
               <div class="text-area">
                 <p class="card-desc">
-                  「ヒトツヨ」は格闘ゲームの上達のために効果的にPDCAを回す支援システムです。<br>
-                  自分の弱点や練習課題を可視化、プレイしながら記録することで<br>
-                  <strong>1日ひとつ強くなる</strong>をサポートします！<br>
+                  「ヒトツヨ」は格闘ゲームの上達のために効果的にPDCAを回す支援システムです。<br
+                  />
+                  自分の弱点や練習課題を可視化、プレイしながら記録することで<br
+                  />
+                  <strong>1日ひとつ強くなる</strong>をサポートします！<br />
                   コンボレシピ管理やメモ機能もあります。
                 </p>
                 <div class="links-area">
-                  <a href="https://stronger-a-day.solunita.net" target="_blank" class="btn-primary skew-box">▶ サイトを見る</a>
-                  <a href="https://www.youtube.com/watch?v=8_F8eLzMWbU" target="_blank" class="btn-youtube skew-box">▶ 解説動画</a>
+                  <a
+                    href="https://stronger-a-day.solunita.net"
+                    target="_blank"
+                    class="btn-primary skew-box">▶ サイトを見る</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=8_F8eLzMWbU"
+                    target="_blank"
+                    class="btn-youtube skew-box">▶ 解説動画</a
+                  >
                 </div>
               </div>
               <div class="image-area">
                 <div class="screenshot-placeholder">
-                  <img src="/screenshot.png" alt="ヒトツヨ スクショ" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="actual-screenshot" />
-                  <div class="placeholder-text" style="display:none">Screenshot</div>
+                  <img
+                    src="/screenshot.png"
+                    alt="ヒトツヨ スクショ"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    class="actual-screenshot"
+                  />
+                  <div class="placeholder-text" style="display:none">
+                    Screenshot
+                  </div>
                 </div>
               </div>
             </div>
@@ -63,29 +88,30 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Twitch -->
-      <a href="https://www.twitch.tv/aquitcd" class="activity-card skew-box solid-shadow animate-slide-in delay-100 twitch-card" target="_blank" rel="noopener noreferrer">
+      <div class="activity-card skew-box solid-shadow animate-slide-in delay-100 twitch-card">
         <div class="card-inner side-icon-inner">
           <div class="card-bg"></div>
           <div class="platform-icon twitch-icon-wrap" aria-label="Twitch">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" fill="currentColor" width="44" height="51">
-              <path d="M7 2L2 7v18h6v5l5-5h4l7-7V2H7zm18 15l-4 4h-4l-4 4v-4H6V4h19v13z"/>
-              <path d="M18 7h-2v6h2V7zm-5 0h-2v6h2V7z"/>
+              <path d="M7 2L2 7v18h6v5l5-5h4l7-7V2H7zm18 15l-4 4h-4l-4 4v-4H6V4h19v13z"></path>
+              <path d="M18 7h-2v6h2V7zm-5 0h-2v6h2V7z"></path>
             </svg>
           </div>
           <div class="card-text">
             <h3 class="card-title twitch-title">Twitch Streaming</h3>
             <p class="card-desc">
-              アクションゲーム好きの雑食ゲーマーとして配信中。格ゲー多め。<br>
-              自作AI相棒システム「パルセラ」と喋りながら配信してます。<br>
-              格ゲー上達支援Webアプリ「ヒトツヨ」も実際に使ってます。<br>
+              アクションゲーム好きの雑食ゲーマーとして配信中。格ゲー多め。<br />
+              自作AI相棒システム「パルセラ」と喋りながら配信してます。<br />
+              格ゲー上達支援Webアプリ「ヒトツヨ」も実際に使ってます。<br />
               コメント、アドバイス、大歓迎です。
             </p>
+            <a href="https://www.twitch.tv/aquitcd" target="_blank" rel="noopener noreferrer" class="card-link-btn twitch-btn">▶ 配信を観に行く</a>
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- A.K.I.研究所 Discord -->
-      <a href="https://discord.gg/9MNuzE5B2Z" class="activity-card skew-box solid-shadow animate-slide-in delay-200 discord-card aki-card" target="_blank" rel="noopener noreferrer">
+      <div class="activity-card skew-box solid-shadow animate-slide-in delay-200 discord-card aki-card">
         <div class="card-inner side-icon-inner">
           <div class="card-bg"></div>
           <div class="platform-icon discord-icon-wrap">
@@ -95,16 +121,17 @@ import Layout from '../layouts/Layout.astro';
             <h3 class="card-title discord-title">A.K.I.研究所</h3>
             <p class="discord-label">Discord サーバー</p>
             <p class="card-desc">
-              A.K.I.プレイヤー、またはA.K.I.を使ってみたいプレイヤーのための情報交換と交流が目的のサーバーです。<br>
-              A.K.I.の実装リリース前から存在し、もっとも開かれたキャラサーバーの一つです。<br>
+              A.K.I.プレイヤー、またはA.K.I.を使ってみたいプレイヤーのための情報交換と交流が目的のサーバーです。<br />
+              A.K.I.の実装リリース前から存在し、もっとも開かれたキャラサーバーの一つです。<br />
               初心者から上級者まで幅広く使われています。
             </p>
+            <a href="https://discord.gg/9MNuzE5B2Z" target="_blank" rel="noopener noreferrer" class="card-link-btn discord-btn">▶ サーバーに参加</a>
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- 社会人協力ゲーム組合 Discord -->
-      <a href="https://discord.gg/hduVYVbj3b" class="activity-card skew-box solid-shadow animate-slide-in delay-300 discord-card" target="_blank" rel="noopener noreferrer">
+      <div class="activity-card skew-box solid-shadow animate-slide-in delay-300 discord-card">
         <div class="card-inner side-icon-inner">
           <div class="card-bg"></div>
           <div class="platform-icon discord-icon-wrap">
@@ -114,22 +141,23 @@ import Layout from '../layouts/Layout.astro';
             <h3 class="card-title discord-title">社会人協力ゲーム組合</h3>
             <p class="discord-label">Discord サーバー</p>
             <p class="card-desc">
-              協力プレイしたい社会人ゲーマーのDiscordやってます！<br>
-              野良は怖いけど協力プレイしたい、やりたいゲームのフレンドがいない、マイナータイトルで専用サーバーがない、<br>
-              そんなみなさんと集まって、協力プレイする場として使ってください。<br>
+              協力プレイしたい社会人ゲーマーのDiscordやってます！<br />
+              野良は怖いけど協力プレイしたい、やりたいゲームのフレンドがいない、マイナータイトルで専用サーバーがない、<br />
+              そんなみなさんと集まって、協力プレイする場として使ってください。<br />
               PC/PS/Switch/Xbox、どのハードでも是非！
             </p>
+            <a href="https://discord.gg/hduVYVbj3b" target="_blank" rel="noopener noreferrer" class="card-link-btn discord-btn">▶ サーバーに参加</a>
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- X -->
-      <a href="https://x.com/AquiTCD" class="activity-card skew-box solid-shadow animate-slide-in delay-400 x-card" target="_blank" rel="noopener noreferrer">
+      <div class="activity-card skew-box solid-shadow animate-slide-in delay-400 x-card">
         <div class="card-inner side-icon-inner">
           <div class="card-bg"></div>
           <div class="platform-icon x-icon-wrap" aria-label="X (Twitter)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
             </svg>
           </div>
           <div class="card-text">
@@ -137,9 +165,10 @@ import Layout from '../layouts/Layout.astro';
             <p class="card-desc">
               ゲーム7割、生活2割、Web開発1割ぐらいでつぶやきますが、特に有益なことはつぶやきません。
             </p>
+            <a href="https://x.com/AquiTCD" target="_blank" rel="noopener noreferrer" class="card-link-btn x-btn">▶ Xでフォロー</a>
           </div>
         </div>
-      </a>
+      </div>
     </section>
 
     <!-- Webエンジニアとしての締め -->
@@ -151,20 +180,23 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="philosophy-text">
             <p class="philosophy">
-              <ruby>魔法使い<rt>Wizard</rt></ruby>や<ruby>忍者<rt>Ninja</rt></ruby>には<br>
-              なれないかもしれないけど<br>
-              「つくりたい」と思ったものを<br>
-              自分でつくれる強さと<br>
-              その自由が持つ力を信じていきたい<br><br>
-              そうやって熱意を込めて作ったもので<br>
-              自分と誰かがちょっと幸せな気持ちになったら良いなぁ…<br>
-              <span class="philosophy-closing">と思って Webエンジニアとしてやってます</span>
+              <ruby>魔法使い<rt>Wizard</rt></ruby>や<ruby
+                >忍者<rt>Ninja</rt>
+              </ruby>には<br />
+              なれないかもしれないけど<br />
+              「つくりたい」と思ったものを<br />
+              自分でつくれる強さと<br />
+              その自由が持つ力を信じていきたい<br /><br />
+              そうやって熱意を込めて作ったもので<br />
+              自分と誰かがちょっと幸せな気持ちになったら良いなぁ…<br />
+              <span class="philosophy-closing"
+                >と思って Webエンジニアとしてやってます</span
+              >
             </p>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 </Layout>
 
@@ -192,7 +224,7 @@ import Layout from '../layouts/Layout.astro';
 
   .name {
     font-size: 4rem;
-    font-weight: 400;
+    font-weight: 900;
     line-height: 1;
     color: var(--text-inverse);
   }
@@ -262,13 +294,13 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .main-featured::before {
-    content: "★ MAIN PROJECT";
+    content: '★ MAIN PROJECT';
     position: absolute;
     top: -16px;
     right: 10px;
     background: var(--accent-red);
     color: var(--text-primary);
-    font-weight: 400;
+    font-weight: 900;
     font-family: var(--font-heading);
     padding: 4px 16px;
     font-size: 0.95rem;
@@ -278,7 +310,9 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: 0.08em;
   }
 
-  .featured-card { padding: 0; }
+  .featured-card {
+    padding: 0;
+  }
 
   .card-inner {
     padding: 28px 36px;
@@ -288,7 +322,7 @@ import Layout from '../layouts/Layout.astro';
 
   .card-title {
     font-size: 2.6rem;
-    font-weight: 400;
+    font-weight: 900;
     display: inline-block;
     background-color: var(--accent-red);
     color: var(--text-primary);
@@ -299,7 +333,10 @@ import Layout from '../layouts/Layout.astro';
   .card-title::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: var(--accent-red);
     transform: skew(-10deg);
     z-index: -1;
@@ -320,7 +357,9 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 24px;
   }
 
-  .text-area { flex: 1; }
+  .text-area {
+    flex: 1;
+  }
 
   .image-area {
     flex: 1;
@@ -341,11 +380,16 @@ import Layout from '../layouts/Layout.astro';
 
   .actual-screenshot {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
-  .placeholder-text { z-index: 0; }
+  .placeholder-text {
+    z-index: 0;
+  }
 
   .links-area {
     margin-top: 28px;
@@ -354,9 +398,10 @@ import Layout from '../layouts/Layout.astro';
     gap: 16px;
   }
 
-  .btn-primary, .btn-youtube {
+  .btn-primary,
+  .btn-youtube {
     display: inline-block;
-    font-weight: 400;
+    font-weight: 900;
     font-family: var(--font-heading);
     text-decoration: none;
     padding: 12px 28px;
@@ -382,11 +427,22 @@ import Layout from '../layouts/Layout.astro';
     transition: all 0.2s;
   }
 
-  .btn-youtube { color: #ffffff; }
+  .btn-youtube {
+    color: #ffffff;
+  }
 
-  .btn-primary:hover, .btn-youtube:hover { transform: translate(-2px, -2px); }
-  .btn-primary:hover::before { box-shadow: 6px 6px 0px var(--accent-red); background-color: #e2e2e2; }
-  .btn-youtube:hover::before { box-shadow: 6px 6px 0px #ffffff; background-color: #cc0000; }
+  .btn-primary:hover,
+  .btn-youtube:hover {
+    transform: translate(-2px, -2px);
+  }
+  .btn-primary:hover::before {
+    box-shadow: 6px 6px 0px var(--accent-red);
+    background-color: #e2e2e2;
+  }
+  .btn-youtube:hover::before {
+    box-shadow: 6px 6px 0px #ffffff;
+    background-color: #cc0000;
+  }
 
   .card-desc {
     font-weight: 700;
@@ -395,18 +451,51 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 14px;
   }
 
+  /* ── Card link button ── */
+  .card-link-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 22px;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+  }
+  .card-link-btn:hover { opacity: 0.8; }
+
+  .twitch-btn {
+    background-color: #9146ff;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 3px 3px 0px #fff;
+  }
+  .discord-btn {
+    background-color: #5865f2;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 3px 3px 0px #fff;
+  }
+  .x-btn {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    border: 2px solid var(--accent-red);
+    box-shadow: 3px 3px 0px var(--accent-red);
+  }
+
   /* ── Activity Cards 共通 ── */
   .activity-card {
     display: block;
-    text-decoration: none;
     color: var(--text-primary);
     margin-bottom: 36px;
     position: relative;
     transition: transform 0.2s ease-out;
-    cursor: pointer;
   }
 
-  .activity-card::before { transition: all 0.2s ease-out; }
+  .activity-card::before {
+    transition: all 0.2s ease-out;
+  }
 
   /* アイコン+テキストの横並びレイアウト（共通） */
   .side-icon-inner {
@@ -417,7 +506,10 @@ import Layout from '../layouts/Layout.astro';
 
   .card-bg {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: var(--accent-white);
     transform: skew(-10deg) scaleX(0);
     transform-origin: left;
@@ -425,11 +517,21 @@ import Layout from '../layouts/Layout.astro';
     z-index: -1;
   }
 
-  .activity-card:hover { transform: translate(-6px, -6px); }
-  .activity-card:hover::before { box-shadow: 14px 14px 0px var(--accent-red); }
-  .activity-card:hover .card-bg { transform: skew(-10deg) scaleX(1); }
-  .activity-card:hover .card-desc { color: var(--text-inverse); }
-  .activity-card:hover .card-title { color: var(--text-primary); }
+  .activity-card:hover {
+    transform: translate(-6px, -6px);
+  }
+  .activity-card:hover::before {
+    box-shadow: 14px 14px 0px var(--accent-red);
+  }
+  .activity-card:hover .card-bg {
+    transform: skew(-10deg) scaleX(1);
+  }
+  .activity-card:hover .card-desc {
+    color: var(--text-inverse);
+  }
+  .activity-card:hover .card-title {
+    color: var(--text-primary);
+  }
 
   /* プラットフォームアイコン枠（共通） */
   .platform-icon {
@@ -451,31 +553,54 @@ import Layout from '../layouts/Layout.astro';
     border-radius: 14px;
   }
 
-  .twitch-title { background-color: transparent; font-size: 2.2rem; }
-  .twitch-title::before { background-color: #9146ff; }
-  .twitch-card:hover::before { box-shadow: 14px 14px 0px #9146ff; }
-  .twitch-card:hover .twitch-title { color: var(--text-primary); }
+  .twitch-title {
+    background-color: transparent;
+    font-size: 2.2rem;
+  }
+  .twitch-title::before {
+    background-color: #9146ff;
+  }
+  .twitch-card:hover::before {
+    box-shadow: 14px 14px 0px #9146ff;
+  }
+  .twitch-card:hover .twitch-title {
+    color: var(--text-primary);
+  }
 
   /* ── Discord ── */
   .discord-icon-wrap {
     overflow: hidden;
-    border: 3px solid var(--accent-red);
-    box-shadow: 3px 3px 0px var(--accent-red);
+    border: 3px solid #5865f2;
+    box-shadow: 3px 3px 0px #5865f2;
   }
 
-  .discord-icon-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .discord-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-  .discord-title { background-color: transparent; font-size: 2.2rem; }
-  .discord-title::before { background-color: #0a0a0a; }
+  .discord-title {
+    background-color: transparent;
+    font-size: 2.2rem;
+  }
+  .discord-title::before {
+    background-color: #5865f2;
+  }
   .discord-label {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--accent-red);
+    color: #5865f2;
     margin-top: 4px;
     letter-spacing: 0.05em;
   }
-  .discord-card:hover::before { box-shadow: 14px 14px 0px var(--accent-red); }
-  .discord-card:hover .discord-label { color: var(--text-inverse); }
+  .discord-card:hover::before {
+    box-shadow: 14px 14px 0px #5865f2;
+  }
+  .discord-card:hover .discord-label {
+    color: var(--text-primary);
+  }
 
   /* ── X ── */
   .x-icon-wrap {
@@ -485,14 +610,25 @@ import Layout from '../layouts/Layout.astro';
     box-shadow: 3px 3px 0px var(--text-primary);
   }
 
-  .x-title { background-color: transparent; font-size: 2.2rem; }
-  .x-title::before { background-color: var(--bg-color); }
-  .x-card:hover .x-title { color: var(--text-primary); }
+  .x-title {
+    background-color: transparent;
+    font-size: 2.2rem;
+  }
+  .x-title::before {
+    background-color: var(--bg-color);
+  }
+  .x-card:hover .x-title {
+    color: var(--text-primary);
+  }
 
   /* ── Philosophy (締め) ── */
-  .philosophy-section { margin-bottom: 60px; }
+  .philosophy-section {
+    margin-bottom: 60px;
+  }
 
-  .philosophy-container { width: 100%; }
+  .philosophy-container {
+    width: 100%;
+  }
 
   .philosophy-inner {
     display: flex;
@@ -501,9 +637,13 @@ import Layout from '../layouts/Layout.astro';
     padding: 32px 40px;
   }
 
-  .philosophy-text { flex: 1; }
+  .philosophy-text {
+    flex: 1;
+  }
 
-  .philosophy-container::before { background-color: #1a1a1a; }
+  .philosophy-container::before {
+    background-color: #1a1a1a;
+  }
 
   .philosophy {
     font-size: 1.25rem;
@@ -522,11 +662,114 @@ import Layout from '../layouts/Layout.astro';
 
   /* ── Responsive ── */
   @media (max-width: 640px) {
-    .name { font-size: 2.6rem; }
-    .content-split { flex-direction: column; }
-    .bio-inner,
-    .side-icon-inner,
-    .philosophy-inner { flex-direction: column; }
-    .avatar-wrap { width: 72px; height: 72px; }
+    .container {
+      padding: 40px 16px 80px;
+    }
+
+    /* Header */
+    .profile-header {
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .name-container {
+      padding: 10px 20px;
+      max-width: 100%;
+    }
+    .name {
+      font-size: 1.8rem;
+    }
+    .bio-inner {
+      flex-direction: column;
+      padding: 20px 20px;
+      gap: 16px;
+    }
+    .avatar-wrap {
+      width: 72px;
+      height: 72px;
+    }
+    .bio {
+      font-size: 1rem;
+    }
+
+    /* ヒトツヨ */
+    .main-featured {
+      margin-bottom: 48px;
+    }
+    .card-inner {
+      padding: 20px 20px;
+    }
+    .card-title {
+      font-size: 2rem;
+    }
+    .content-split {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .image-area {
+      min-width: unset;
+      width: 100%;
+    }
+    .links-area {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-primary,
+    .btn-youtube {
+      text-align: center;
+      padding: 10px 20px;
+    }
+
+    /* Activity Cards */
+    .activity-card .card-inner {
+      padding: 16px 16px;
+    }
+    .side-icon-inner {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .platform-icon {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+    }
+    .twitch-icon-wrap svg {
+      width: 30px;
+      height: 34px;
+    }
+    .x-icon-wrap svg {
+      width: 28px;
+      height: 28px;
+    }
+    .twitch-title,
+    .discord-title,
+    .x-title {
+      font-size: 1.7rem;
+    }
+    .card-desc {
+      font-size: 0.95rem;
+    }
+
+    /* card-title の背景skewをモバイルに合わせる */
+    .card-title::before {
+      transform: skew(-2deg);
+    }
+    /* card-bg のskewもモバイルに合わせる */
+    .card-bg {
+      transform: skew(-2deg) scaleX(0);
+    }
+    .activity-card:hover .card-bg {
+      transform: skew(-2deg) scaleX(1);
+    }
+
+    /* Philosophy */
+    .philosophy-inner {
+      flex-direction: column;
+      padding: 20px 20px;
+      gap: 16px;
+    }
+    .philosophy {
+      font-size: 1.05rem;
+    }
   }
 </style>
