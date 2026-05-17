@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+  --bg-color: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-inverse: #000000;
+  --accent-red: #e60012;
+  --accent-white: #f4f4f4;
+  --font-heading: 'Noto Sans JP', sans-serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.72)),
+    url('/roraima.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-attachment: fixed, fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+/* ruby タグ：ルビは白で控えめに */
+ruby {
+  ruby-align: center;
+}
+rt {
+  font-size: 0.5em;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+}
+
+/* Persona 5 スタイルユーティリティ */
+.skew-box {
+  position: relative;
+  z-index: 1;
+  background-color: transparent !important;
+}
+
+/* skew は ::before のみ。要素本体は傾けない */
+.skew-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transform: skew(-10deg);
+  z-index: -1;
+  background-color: var(--bg-color);
+}
+
+.solid-shadow {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.solid-shadow::before {
+  box-shadow: 8px 8px 0px var(--accent-red);
+  border: 3px solid var(--text-primary);
+}
+
+.solid-shadow-alt::before {
+  box-shadow: -8px 8px 0px var(--accent-white);
+  border: 3px solid var(--accent-red);
+  background-color: var(--accent-red);
+}
+
+.solid-shadow-alt {
+  color: var(--text-primary);
+}
+
+/* slideIn: 要素自体はskewしない。背景::beforeがskew済み */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }

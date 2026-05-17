@@ -1,0 +1,88 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  href: string;
+  delay?: string;
+}
+
+const { title, description, href, delay = '' } = Astro.props;
+---
+
+<a href={href} class={`activity-card skew-box solid-shadow animate-slide-in ${delay}`} target="_blank" rel="noopener noreferrer">
+  <div class="card-inner">
+    <div class="card-bg"></div>
+    <div class="card-text">
+      <h3 class="card-title">{title}</h3>
+      <p class="card-desc">{description}</p>
+    </div>
+  </div>
+</a>
+
+<style>
+  .activity-card {
+    display: block;
+    text-decoration: none;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    position: relative;
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+  }
+
+  .activity-card::before {
+    transition: all 0.2s ease-out;
+  }
+
+  .card-inner {
+    padding: 24px 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--accent-white);
+    transform: skew(-10deg) scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: -1;
+  }
+
+  .activity-card:hover {
+    transform: translate(-6px, -6px);
+  }
+  
+  .activity-card:hover::before {
+    box-shadow: 14px 14px 0px var(--accent-red);
+  }
+
+  .activity-card:hover .card-bg {
+    transform: skew(-10deg) scaleX(1);
+  }
+
+  .activity-card:hover .card-text {
+    color: var(--text-inverse);
+  }
+
+  .card-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+    display: inline-block;
+    color: var(--accent-red);
+    text-transform: uppercase;
+  }
+
+  .activity-card:hover .card-title {
+    color: var(--text-inverse);
+  }
+
+  .card-desc {
+    font-weight: 700;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+</style>
