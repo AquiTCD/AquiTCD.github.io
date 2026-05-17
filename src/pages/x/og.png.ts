@@ -7,22 +7,18 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
   try {
-    const loadFont = (path: string): ArrayBuffer => {
-      const raw = readFileSync(resolve(path));
-      return raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.byteLength) as ArrayBuffer;
-    };
-
-    const delaGothicData = loadFont('./public/fonts/DelaGothicOne-Regular.ttf');
-
-    const [notoSansFile, notoSerifFile] = await Promise.all([
+    const [notoSansFile, notoSerifFile, delaGothicFile] = await Promise.all([
       fetch('https://raw.githubusercontent.com/googlefonts/noto-cjk/main/Sans/OTF/Japanese/NotoSansCJKjp-Bold.otf'),
       fetch('https://raw.githubusercontent.com/googlefonts/noto-cjk/main/Serif/OTF/Japanese/NotoSerifCJKjp-Black.otf'),
+      fetch('https://raw.githubusercontent.com/google/fonts/main/ofl/delagothicone/DelaGothicOne-Regular.ttf'),
     ]);
     if (!notoSansFile.ok) throw new Error(`Noto Sans fetch failed: ${notoSansFile.statusText}`);
     if (!notoSerifFile.ok) throw new Error(`Noto Serif fetch failed: ${notoSerifFile.statusText}`);
-    const [notoSansData, notoSerifData] = await Promise.all([
+    if (!delaGothicFile.ok) throw new Error(`Dela Gothic fetch failed: ${delaGothicFile.statusText}`);
+    const [notoSansData, notoSerifData, delaGothicData] = await Promise.all([
       notoSansFile.arrayBuffer(),
       notoSerifFile.arrayBuffer(),
+      delaGothicFile.arrayBuffer(),
     ]);
 
     const toDataUrlFetch = async (url: string, mime = 'image/png'): Promise<string> => {
