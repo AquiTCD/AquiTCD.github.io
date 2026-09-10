@@ -12,9 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@lucide/astro": "^1.16.0",
+    "@lucide/astro": "^1.42.0",
     "@resvg/resvg-js": "^2.6.2",
-    "astro": "^6.3.3",
+    "astro": "^7.3.2",
     "qrcode": "^1.5.4",
     "satori": "^0.26.0",
     "satori-html": "^0.3.2"
